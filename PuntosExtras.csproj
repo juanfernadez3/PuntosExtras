@@ -7,10 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
+    <None Remove="UI\buscar.png" />
+    <None Remove="UI\eliminar.png" />
+    <None Remove="UI\guardar.png" />
+    <None Remove="UI\nuevo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="UI\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore.sqlite" Version="3.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\buscar.png" />
+    <Resource Include="UI\eliminar.png" />
+    <Resource Include="UI\guardar.png" />
+    <Resource Include="UI\nuevo.png" />
   </ItemGroup>
 
 </Project>
