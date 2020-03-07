@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore.sqlite" Version="3.1.2" />
     <PackageReference Include="microsoft.entityframeworkcore.tools" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
