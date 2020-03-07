@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PuntosExtras.UI;
 
 namespace PuntosExtras
 {
@@ -23,6 +24,12 @@ namespace PuntosExtras
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistrarPersonasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            FormularioPersona fp = new FormularioPersona();
+            fp.Show();
         }
     }
 }

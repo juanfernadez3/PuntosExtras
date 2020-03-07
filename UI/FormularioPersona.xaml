@@ -5,54 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PuntosExtras.UI"
         mc:Ignorable="d"
-        Title="Formulario Personas" Height="200" Width="500" Background="LightGray">
-
-    <Window.Resources>
-        <Style x:Key="Texts" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="15"></Setter>
-            <Setter Property="Height" Value="25"></Setter>
-            <Setter Property="Width" Value="70"></Setter>
-            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-        </Style>
-    </Window.Resources>
+         Title="Formulario Personas" Height="288" Width="468" Background="LightGray">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"  Style="{StaticResource Texts}" Margin="0,4,0,71">PersonaID</TextBlock>
-        <TextBlock Grid.Row="0"  Style="{StaticResource Texts}" Margin="0,29,0,46">Nombre</TextBlock>
+        <TextBlock Text="PersonaID" Width="auto" Grid.Row="0" Margin="0,0,408,0"></TextBlock>
+        <TextBlock Text="Nombre: " Width="auto" Grid.Row="0" Margin="0,34,410,-34"></TextBlock>
 
-        <Button Name="BuscarButton" Height="25" Content="Buscar" HorizontalContentAlignment="Right" Margin="156,4,274,72" Grid.Row="0" Click="BuscarButton_Click">
+        <TextBox Name="PersonaIDTextBox" Height="25" Margin="70,-1,288,1" Grid.Row="0"/>
+        <TextBox Name="NombreTextBox" Height="25" Margin="70,34,288,-34" Grid.Row="0"/>
+        <Button Name="NuevoButton" Width="100" Height="25" Margin="7,84,361,-84" Click="NuevoButton_Click">
             <Button.Background>
-                <ImageBrush ImageSource="buscar.png" AlignmentX="Left" Stretch="Uniform"/>
-            </Button.Background>
+                <ImageBrush ImageSource="nuevo.png" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background> Nuevo</Button>
 
-        </Button>
-
-        <Button Name="NuevoButton" Content="Nuevo" HorizontalContentAlignment="Right" Margin="25,9,371,-39" Grid.Row="2" Click="NuevoButton_Click" RenderTransformOrigin="-0.703,0.535">
-            <Button.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="nuevo.png" AlignmentX="Left"/>
-            </Button.Background>
-
-        </Button>
-        <Button Name="GuardarButton" Content="Guardar" HorizontalContentAlignment="Right"  Margin="151,13,253,-43" Grid.Row="2" Click="GuardarButton_Click">
+        <Button Name="GuardarButton" Width="100" Height="25" Margin="120,84,248,-84" Click="GuardarButton_Click">
             <Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="guardar.png" AlignmentX="Left"/>
-            </Button.Background>
+            </Button.Background> Guardar</Button>
 
-        </Button>
-        <Button Name="Eliminar" Content="Eliminar" HorizontalContentAlignment="Right"  Margin="267,14,150,-44" Click="Eliminar_Click" Grid.Row="2">
+        <Button Name="EliminarButton" Width="100" Height="25" Margin="235,84,133,-84" Click="EliminarButton_Click">
             <Button.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="eliminar.png" AlignmentX="Left"/>
-            </Button.Background>
+                <ImageBrush ImageSource="eliminar.png" AlignmentX="Left" Stretch="Uniform" />
+            </Button.Background> ELiminar</Button>
 
-        </Button>
-        <TextBox Name="PersoaIdTextBox" Text="0" HorizontalContentAlignment="Center" Height="25" Width="100" Margin="80,4,374,71" Grid.Row="0"></TextBox>
-        <TextBox Name="NombreTextBox" Margin="80,34,289,46" Grid.Row="0"/>
-
+        <Button Name="BuscarButton" Width="100" Height="25" Margin="245,-1,123,1" Click="BuscarButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buscar.png" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background> Buscar</Button>
     </Grid>
-
 </Window>

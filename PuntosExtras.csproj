@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UseWPF>true</UseWPF>
+    <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
+  <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,10 @@
     <Resource Include="UI\eliminar.png" />
     <Resource Include="UI\guardar.png" />
     <Resource Include="UI\nuevo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
